@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven' // Define Maven tool to be used
+        maven 'install maven' // Define Maven tool to be used
     }
 
     stages {
