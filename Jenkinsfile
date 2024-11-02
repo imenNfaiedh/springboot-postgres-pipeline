@@ -41,7 +41,7 @@ pipeline {
         stage("Run Docker Compose") {
             steps {
                 // Run Docker Compose to start the application
-                dir("JenkinsBackend") {
+                dir("springboot-postgres-pipeline") {
                     sh "docker compose up -d"
                 }
             }
