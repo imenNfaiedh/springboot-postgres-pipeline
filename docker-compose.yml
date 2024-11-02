@@ -4,6 +4,7 @@ services:
     build: . #Indique que l'image Docker sera construite à partir du Dockerfile présent dans le répertoire courant.
     ports:
       - "8086:8086" # Lier le port 8086 de l'application au port 8086 de l'hôte
+    restart: always  
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/etudiant # URL de connexion à PostgreSQL
       SPRING_DATASOURCE_USERNAME: postgres
