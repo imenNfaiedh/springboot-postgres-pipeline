@@ -12,7 +12,7 @@ services:
       - db
 
   db:
-    image: postgres:15.7.2 # Spécifier la version de PostgreSQL ici
+    image: postgres:latest # Spécifier la version de PostgreSQL ici
     environment:
       POSTGRES_DB: etudiant # Nom de la base de données à créer
       POSTGRES_USER: postgres
