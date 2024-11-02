@@ -24,7 +24,7 @@ pipeline {
             steps {
                 // Navigate to the project directory and build the Maven project
                 dir("${env.WORKSPACE}") {
-                    sh "mvn clean install"
+                    sh "mvn clean package"
                 }
             }
         }
