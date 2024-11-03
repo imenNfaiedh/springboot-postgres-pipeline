@@ -24,7 +24,7 @@ pipeline {
             steps {
                 // Navigate to the project directory and build the Maven project
                 dir("${env.WORKSPACE}") {
-                    sh "mvn clean install"
+                    bat "mvn clean install"
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 // Build the Docker image using the Dockerfile
                 dir("${env.WORKSPACE}") {
-                    sh "docker build -t backend ."
+                    bat "docker build -t backend ."
                 }
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             steps {
                 // Run Docker Compose to start the application
                 dir("springboot-postgres-pipeline") {
-                    sh "docker compose up -d"
+                    bat "docker compose up -d"
                 }
             }
         }
